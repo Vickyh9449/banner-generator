@@ -6,21 +6,31 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
         $(function(){
-                
+          $('#date').html()      
         });
     </script>
+    <style>
+      div {
+        width: 770px;
+        height: 500px;
+        border-style: solid;
+      }
+    </style>
   </head>
   <body>
       <form>
         Date: <br>
-        <input type="date" name="awarddate"> <br> <br>
+        <input type="date" name="awarddate" id="date"> <br> <br>
         First Name: <br>
-        <input type="text" name="firstname"> <br> <br>
+        <input type="text" name="firstname" id="name"> <br> <br>
         What your reward is for: <br>
-        <input type="award" name="reason"> <br> <br>
+        <input type="award" name="reason" id="reason"> <br> <br>
         Select a color: <br>
-        <input type="color" name="favcolor"> <br> <br>
-        <input type="submit" value="Submit">
+        <input type="color" name="favcolor" id="color"> <br> <br>
+        <button>Submit</button>
       </form>
+      <div id=banner>
+        <p></p>
+      </div>
   </body>
 </html>
