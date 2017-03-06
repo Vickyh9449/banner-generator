@@ -7,15 +7,16 @@
     <script>
         $(function(){
           $('button').click(function(){
-            var name= $('#name').val();
+            var name = $('#name').val();
             // var great= $('#great').val();
             // var weird = $('#weird').val();
             // var bad= $('#bad').val();
-            var checked= $(":checked").val();
-            var color= $('#color').val();
+            // var checked= $(":checked").val();
+            var color = $('#color').val();
+            var date = $('#date').val();
             
             $('h1').html("My name is " + name);
-            $('h2').html("Congratulations, idiot for " + checked + "!!");
+            $('h2').html("You received this on " + date + "!!");
             $('div').css('background-color',color);
           });
           
@@ -30,15 +31,17 @@
     </style>
   </head>
   <body>
-      <form>
+      <form action="">
+        Date: <br>
+        <input type="date" id="date"> <br> 
         Name: <br>
-        <input type="text" name="firstname" id="name"> <br> <br>
-        What your reward is for: <br>
-        <input type="radio" name="reason" id="great"> Doing something great<br>
-        <input type="radio" name="reason" id="weird"> Doing something weird<br>
-        <input type="radio" name="reason" id="bad"> Doing something bad<br><br>
+        <input type="text" id="name"> <br> 
+        <!--What your reward is for: <br>-->
+        <!--<input type="radio" name="reason" id="great"> Doing something great<br>-->
+        <!--<input type="radio" name="reason" id="weird"> Doing something weird<br>-->
+        <!--<input type="radio" name="reason" id="bad"> Doing something bad<br><br>-->
         Select a color: <br>
-        <input type="color" name="favcolor" id="color"> <br> <br>
+        <input type="color" id="color"> <br> 
         <button>Submit</button>
       </form>
       <div>
