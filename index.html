@@ -6,7 +6,19 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
         $(function(){
-          $('#date').html()      
+          $('button').click(function(){
+            var name= $('#name').val();
+            // var great= $('#great').val();
+            // var weird = $('#weird').val();
+            // var bad= $('#bad').val();
+            var checked= $(':checked').val();
+            var color= $('#color').val();
+            
+            $('h1').html("My name is " + name);
+            $('h2').html("Congratulations, idiot for " + checked + "!!");
+            $('div').css('background-color',color);
+          });
+          
         });
     </script>
     <style>
@@ -22,15 +34,16 @@
         Name: <br>
         <input type="text" name="firstname" id="name"> <br> <br>
         What your reward is for: <br>
-        <input type="radio" name="reason" value="great"> Doing something great<br>
-        <input type="radio" name="reason" value="weird"> Doing something weird<br>
-        <input type="radio" name="reason" value="bad"> Doing something bad<br><br>
+        <input type="radio" name="reason" id="great"> Doing something great<br>
+        <input type="radio" name="reason" id="weird"> Doing something weird<br>
+        <input type="radio" name="reason" id="bad"> Doing something bad<br><br>
         Select a color: <br>
         <input type="color" name="favcolor" id="color"> <br> <br>
         <button>Submit</button>
       </form>
-      <div id=banner>
-        <p></p>
+      <div>
+        <h1></h1>
+        <h2></h2>
       </div>
   </body>
 </html>
